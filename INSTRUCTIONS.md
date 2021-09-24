@@ -4,8 +4,8 @@ For this assignment, you will be creating a reflection/feedback form modeled aft
 
 # Task List
 - [x] Install dependencies (npm, redux-logger)
-- [ ] Create a default feedback object and setState as component names and blank values that includes a 
-- [ ] Create an object feedbackReducer with the state of default feedback 
+- [x] Create a default feedback object and setState as component names and blank values
+- [x] Create an object feedbackReducer with the state of default feedback 
 - [ ] Create 7 components (Header, FeelingRating, UnderstandingRating, SupportRating, UserComment, ReviewFeedback, ThankYou )
 - [ ] Use selector in each to access the feedbackReducer
 - [ ] Create dispatch actions to set the values of the parameters in the feedbackReducer
