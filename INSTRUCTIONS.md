@@ -3,7 +3,7 @@
 For this assignment, you will be creating a reflection/feedback form modeled after Prime's system. Feedback will be collected over 4 views. In a separate review page, display the current feedback values and a submit button. and when all steps are complete, your app will save the feedback in the database. 
 
 # Task List
-- [ ] Install dependencies (npm, redux-logger)
+- [x] Install dependencies (npm, redux-logger)
 - [ ] Create a default feedback object and setState as component names and blank values that includes a 
 - [ ] Create an object feedbackReducer with the state of default feedback 
 - [ ] Create 7 components (Header, FeelingRating, UnderstandingRating, SupportRating, UserComment, ReviewFeedback, ThankYou )
