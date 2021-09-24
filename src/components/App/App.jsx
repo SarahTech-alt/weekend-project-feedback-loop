@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import FeelingRating from '../FeelingRating/FeelingRating';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <h4>Don't forget it!</h4>
         <button onClick={testRoute}>Test</button>
       </header>
+      <FeelingRating />
     </div>
   );
 }
