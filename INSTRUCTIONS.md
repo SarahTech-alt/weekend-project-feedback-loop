@@ -2,6 +2,21 @@
 
 For this assignment, you will be creating a reflection/feedback form modeled after Prime's system. Feedback will be collected over 4 views. In a separate review page, display the current feedback values and a submit button. and when all steps are complete, your app will save the feedback in the database. 
 
+# Task List
+- [ ] Install dependencies (npm, redux-logger)
+- [ ] Create a default feedback object and setState as component names and blank values that includes a 
+- [ ] Create an object feedbackReducer with the state of default feedback 
+- [ ] Create 7 components (Header, FeelingRating, UnderstandingRating, SupportRating, UserComment, ReviewFeedback, ThankYou )
+- [ ] Use selector in each to access the feedbackReducer
+- [ ] Create dispatch actions to set the values of the parameters in the feedbackReducer
+- [ ] Clear the input values on the form after entry
+- [ ] Create conditionals in the feedbackReducer to set the values of the object
+- [ ] On Submit page map over the feed object to display the submitted feedback
+- [ ] On Submit page add submit button that sends an axios POST request to the server with object data and takes the user to the thank you page
+- [ ] On the router create a query to send to the database with the post request data
+- [ ] On the thank you page make a button to leave new feedback that takes the user back to the home page
+
+
 ### SETUP
 
 Create your database and tables using the provided `data.sql` file. Start the server.
