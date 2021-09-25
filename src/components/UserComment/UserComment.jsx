@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 
 function UserComment() {
 
@@ -8,6 +9,7 @@ function UserComment() {
 
     const dispatch = useDispatch();
     const [newComment, setNewComment] = useState('');
+    const history = useHistory();
 
     const handleSubmit = () => {
         event.preventDefault();
@@ -17,6 +19,7 @@ function UserComment() {
                 userComment: newComment
             }
         })
+        history.push('/review');
     }
     
 
