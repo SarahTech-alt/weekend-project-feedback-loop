@@ -18,7 +18,9 @@ const feedbackRatings = (state = feedbackObject, action) => {
         return { ...state, ...action.payload};
     } else if (action.type==='ADD_UNDERSTANDING_RATING') {
         return {...state, ...action.payload};
-    } else if (action.type==='ADD_UNDERSTANDING_RATING') {
+    } else if (action.type==='ADD_SUPPORT_RATING') {
+        return {...state, ...action.payload};
+    } else if (action.type==='ADD_USER_COMMENT') {
         return {...state, ...action.payload};
     }
     return state;
