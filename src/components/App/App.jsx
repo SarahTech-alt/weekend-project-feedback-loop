@@ -4,7 +4,7 @@ import './App.css';
 import FeelingRating from '../FeelingRating/FeelingRating';
 import UnderstandingRating from '../UnderstandingRating/UnderstandingRating';
 import { useSelector } from 'react-redux';
-
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 
 function App() {
@@ -27,13 +27,14 @@ function App() {
         support: 1,
         comments: 'none'
       }
-    }).then(response =>{
-      console.log(response);}).catch(error => {
-        console.log('there was an error', error);
-      })
+    }).then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log('there was an error', error);
+    })
   }
 
-  
+
 
   return (
     <div className='App'>
@@ -43,8 +44,14 @@ function App() {
         <button onClick={testRoute}>Test</button>
       </header>
       <p>{JSON.stringify(feedbackRating)}</p>
-      <FeelingRating />
-      <UnderstandingRating />
+      <Router>
+        <Route exact path ='/feeling'>
+          <FeelingRating />
+        </Route>
+        <Route exact path='/understanding'>
+          <UnderstandingRating />
+        </Route>
+      </Router>
     </div>
   );
 }
