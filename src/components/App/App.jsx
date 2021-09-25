@@ -7,6 +7,7 @@ import SupportRating from '../SupportRating/SupportRating';
 import UserComment from '../UserComment/UserComment';
 import { useSelector } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 
 
 function App() {
@@ -58,6 +59,9 @@ function App() {
         </Route>
         <Route exact path='/comment'>
           <UserComment />
+        </Route>
+        <Route exact path='/review'>
+          <ReviewFeedback />
         </Route>
       </Router>
     </div>
