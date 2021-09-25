@@ -17,8 +17,11 @@ app.post( '/feedback', (req,res) =>{
     
 const newFeedback = req.body;
 const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
-VALUES (4, 4, 5, 'Doing Great!');`
-pool.query(queryText).then(result => {
+VALUES ($1,$2,$3,$4);`
+pool.query(queryText, [newFeedback.feeling,
+newFeedback.understanding,
+newFeedback.support,
+newFeedback.comments]).then(result => {
     res.sendStatus(201);
 }).catch(error => {
     console.log('There was an error making request', error);
