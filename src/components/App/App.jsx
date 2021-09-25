@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import FeelingRating from '../FeelingRating/FeelingRating';
 import UnderstandingRating from '../UnderstandingRating/UnderstandingRating';
+import SupportRating from '../SupportRating/SupportRating';
 import { useSelector } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
@@ -50,6 +51,9 @@ function App() {
         </Route>
         <Route exact path='/understanding'>
           <UnderstandingRating />
+        </Route>
+        <Route exact path='/support'>
+          <SupportRating />
         </Route>
       </Router>
     </div>
