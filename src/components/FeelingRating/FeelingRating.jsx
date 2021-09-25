@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 // want to take the score inputted from
 // the user input and dispatch it to the variable
@@ -21,6 +22,10 @@ function FeelingRating() {
 
     const dispatch = useDispatch();
 
+    // access useHistory from react-redux-dom
+    // to navigate user to the next page on submit
+    const history = useHistory();
+
     // declare a variable to hold the data
     // that will be dispatched to the reducer
     const [feelingScore, setFeelingScore] = useState(0);
@@ -36,6 +41,7 @@ function FeelingRating() {
                 feelingRating: feelingScore
             }
         })
+        history.push('/understanding')
     }
 
     return (
