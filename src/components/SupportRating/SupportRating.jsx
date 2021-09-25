@@ -19,7 +19,7 @@ function SupportRating() {
                 supportRating: supportScore
         }
     })
-        history.push('/feeling');
+        history.push('/comment');
     }
 
     return (

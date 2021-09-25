@@ -56,6 +56,9 @@ function App() {
         <Route exact path='/support'>
           <SupportRating />
         </Route>
+        <Route exact path='/comment'>
+          <UserComment />
+        </Route>
       </Router>
     </div>
   );
