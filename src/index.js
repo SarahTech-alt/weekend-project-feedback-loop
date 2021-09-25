@@ -11,12 +11,14 @@ const feedbackObject = {feelingRating: '',
 understandingRating: '', 
 supportRating: '', 
 userComment: '', 
-reviewFeedback: '',};
+};
 
 const feedbackRatings = (state = feedbackObject, action) => {
-    if(action.type='ADD_FEELING_RATING'){
+    if(action.type==='ADD_FEELING_RATING'){
         return { ...state, ...action.payload};
-    } else if (action.type='ADD_UNDERSTANDING_RATING') {
+    } else if (action.type==='ADD_UNDERSTANDING_RATING') {
+        return {...state, ...action.payload};
+    } else if (action.type==='ADD_UNDERSTANDING_RATING') {
         return {...state, ...action.payload};
     }
     return state;
