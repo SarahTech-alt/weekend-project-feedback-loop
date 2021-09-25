@@ -2,7 +2,9 @@ import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import FeelingRating from '../FeelingRating/FeelingRating';
+import UnderstandingRating from '../UnderstandingRating/UnderstandingRating';
 import { useSelector } from 'react-redux';
+
 
 
 function App() {
@@ -42,6 +44,7 @@ function App() {
       </header>
       <p>{JSON.stringify(feedbackRating)}</p>
       <FeelingRating />
+      <UnderstandingRating />
     </div>
   );
 }
