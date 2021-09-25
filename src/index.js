@@ -7,19 +7,22 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import { Provider } from 'react-redux'; 
 
-const feedbackObject = {FeelingRating: '', 
-UnderstandingRating: '', 
-SupportRating: '', 
-UserComment: '', 
-ReviewFeedback: '',}
+const feedbackObject = {feelingRating: '', 
+understandingRating: '', 
+supportRating: '', 
+userComment: '', 
+reviewFeedback: '',};
 
-const feedbackReducer = (state = [feedbackObject], action) => {
+const feedbackRatings = (state = feedbackObject, action) => {
+    if(action.type='ADD_FEELING_RATING'){
+        return { ...state, ...action.payload};
+    }
     return state;
 }
 
 const reduxStore = createStore(
     combineReducers(
-    {feedbackReducer
+    {feedbackRatings
     }),
     applyMiddleware(logger)
 );

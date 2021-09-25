@@ -2,9 +2,13 @@ import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import FeelingRating from '../FeelingRating/FeelingRating';
+import { useSelector } from 'react-redux';
 
 
 function App() {
+
+  // access store on app
+  const feedbackRating = useSelector(store => store.feedbackRating);
 
   // Make app accessible on page load
   useEffect(() => {
@@ -36,6 +40,7 @@ function App() {
         <h4>Don't forget it!</h4>
         <button onClick={testRoute}>Test</button>
       </header>
+      <p>{JSON.stringify(feedbackRating)}</p>
       <FeelingRating />
     </div>
   );
