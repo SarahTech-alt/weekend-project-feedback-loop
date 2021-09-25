@@ -24,7 +24,7 @@ function ReviewFeedback() {
         }).catch(error => {
           console.log('there was an error posting to database', error);
         })
-        history.push('/feeling')
+        history.push('/thanks')
       }
 
 

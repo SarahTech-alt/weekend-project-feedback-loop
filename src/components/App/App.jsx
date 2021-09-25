@@ -8,6 +8,7 @@ import UserComment from '../UserComment/UserComment';
 import { useSelector } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import ThankYou from '../ThankYou/ThankYou';
 
 
 function App() {
@@ -60,6 +61,9 @@ function App() {
         </Route>
         <Route exact path='/review'>
           <ReviewFeedback />
+        </Route>
+        <Route exact path='/thanks'>
+          <ThankYou />
         </Route>
       </Router>
     </div>
