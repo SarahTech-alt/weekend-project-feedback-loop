@@ -4,6 +4,7 @@ import './App.css';
 import FeelingRating from '../FeelingRating/FeelingRating';
 import UnderstandingRating from '../UnderstandingRating/UnderstandingRating';
 import SupportRating from '../SupportRating/SupportRating';
+import UserComment from '../UserComment/UserComment';
 import { useSelector } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
