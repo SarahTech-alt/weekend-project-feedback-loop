@@ -1,6 +1,6 @@
-
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 // want to take the score inputted from
 // the user input and dispatch it to the variable
@@ -26,6 +26,10 @@ function UnderstandingRating() {
     // that will be dispatched to the reducer
     const [understandingScore, setUnderstandingScore] = useState(0);
 
+    // access useHistory from react-router-com
+    // to send the user to the next page of the form
+    const history = useHistory();
+
     // on form submit send object parameter 
     // and value to the reducer on index.js
     const handleSubmit = () => {
@@ -37,6 +41,7 @@ function UnderstandingRating() {
                 understandingRating: understandingScore,
             }
         })
+        history.push('/support');
     }
 
     return (
