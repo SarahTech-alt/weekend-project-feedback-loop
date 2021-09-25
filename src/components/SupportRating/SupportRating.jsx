@@ -4,6 +4,9 @@ import { useHistory } from 'react-router-dom';
 
 function SupportRating() {
 
+    // Same concept as FeelingRating component
+    // See code comments there
+
     const [supportScore, setSupportScore] = useState(0);
     const dispatch = useDispatch();
     const history = useHistory();

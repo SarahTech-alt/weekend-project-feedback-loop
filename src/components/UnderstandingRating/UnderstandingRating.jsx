@@ -15,7 +15,6 @@ import { useHistory } from 'react-router-dom';
 // prevent default on button click
 
 
-
 function UnderstandingRating() {
     // access useDispatch from react-redux
     // to dispatch information to the reducer on index.js
