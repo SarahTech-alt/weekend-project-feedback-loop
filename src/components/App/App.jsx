@@ -21,25 +21,9 @@ function App() {
     console.log('in useEffect');
   }, []);
 
-  // const testRoute = () => {
-  //   axios({
-  //     method: 'POST',
-  //     url: '/feedback',
-  //     data: {
-  //       feeling: 1,
-  //       understanding: 1,
-  //       support: 1,
-  //       comments: 'none'
-  //     }
-  //   }).then(response => {
-  //     console.log(response);
-  //   }).catch(error => {
-  //     console.log('there was an error', error);
-  //   })
-  // }
-
-
-
+  // Header displays on all the pages
+  // Router encloses all the routes for different components
+  // paths allow user to move throughout the components
   return (
     <div className='App'>
       <header className='App-header'>

@@ -13,6 +13,9 @@ supportRating: '',
 userComment: '', 
 };
 
+// Looks for dispatch actions and updates the feedbackObject
+// if there is a matching action
+
 const feedbackRatings = (state = feedbackObject, action) => {
     if(action.type==='ADD_FEELING_RATING'){
         return { ...state, ...action.payload};
@@ -26,6 +29,9 @@ const feedbackRatings = (state = feedbackObject, action) => {
     return state;
 }
 
+// Creates a store to be accessed for the POST request
+// in ReviewFeedback
+
 const reduxStore = createStore(
     combineReducers(
     {feedbackRatings
@@ -33,5 +39,7 @@ const reduxStore = createStore(
     applyMiddleware(logger)
 );
 
+// Renders the app on the dom
+// provider makes the store available to everything within the app
 ReactDOM.render(<Provider store={reduxStore}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

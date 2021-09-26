@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 function UserComment() {
 
     // Same concept as FeelingRating component
-    // Refer there for code comments
+    // Input here is text and is not required
 
     const dispatch = useDispatch();
     const [newComment, setNewComment] = useState('');
