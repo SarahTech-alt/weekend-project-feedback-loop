@@ -8,6 +8,10 @@ function ReviewFeedback() {
         const feedback = useSelector(store => store.feedbackRatings)
         const history = useHistory();
 
+    const goBack = () => {
+        history.push('/feeling');
+    }
+
     const postFeedback = () => {
         event.preventDefault();
         axios({
@@ -37,6 +41,7 @@ function ReviewFeedback() {
             <p>Support: {feedback.supportRating}</p>
             <p> Comments: {feedback.userComment}</p>
             <button onClick={postFeedback}>Submit</button>
+            <button onClick={goBack}>Edit Feedback</button>
         </section>
     );
 }
