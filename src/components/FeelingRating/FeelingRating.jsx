@@ -28,7 +28,7 @@ function FeelingRating() {
 
     // declare a variable to hold the data
     // that will be dispatched to the reducer
-    const [feelingScore, setFeelingScore] = useState();
+    const [feelingScore, setFeelingScore] = useState('');
 
     // on form submit send object parameter 
     // and value to the reducer on index.js

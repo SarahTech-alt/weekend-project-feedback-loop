@@ -23,7 +23,7 @@ function UnderstandingRating() {
 
     // declare a variable to hold the data
     // that will be dispatched to the reducer
-    const [understandingScore, setUnderstandingScore] = useState();
+    const [understandingScore, setUnderstandingScore] = useState('');
 
     // access useHistory from react-router-com
     // to send the user to the next page of the form

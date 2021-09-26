@@ -7,7 +7,7 @@ function SupportRating() {
     // Same concept as FeelingRating component
     // See code comments there
 
-    const [supportScore, setSupportScore] = useState();
+    const [supportScore, setSupportScore] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();
     
@@ -26,7 +26,7 @@ function SupportRating() {
         <>
         <form onSubmit={handleSubmit}>
             <h1> How well are you being supported?</h1>
-            <input required type="number" value={supportScore} onChange = {(event) => setSupportScore(event.target.value)} />
+            <input required type="number" value={supportScore} placeholder="1-5" onChange = {(event) => setSupportScore(event.target.value)} />
             <button type="submit">Next</button>
         </form>
         </>
