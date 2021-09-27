@@ -9,7 +9,7 @@ function ReviewFeedback() {
         const history = useHistory();
 
     const goBack = () => {
-        history.push('/feeling');
+        history.push('/');
     }
 
     const postFeedback = () => {

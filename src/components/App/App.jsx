@@ -31,7 +31,7 @@ function App() {
       </header>
       <p>{JSON.stringify(feedbackRating)}</p>
       <Router>
-        <Route exact path ='/feeling'>
+        <Route exact path ='/'>
           <FeelingRating />
         </Route>
         <Route exact path='/understanding'>

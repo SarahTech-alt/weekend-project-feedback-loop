@@ -44,11 +44,24 @@ function FeelingRating() {
         history.push('/understanding')
     }
 
+    // ensure the number entered is between 1 and 5
+    // if not clear the input
+    // else change feelingScore to enter input
+
+    const checkNumber = (number) => {
+        if (number < 1 || number > 5){
+            alert('Number must be between 1 and 5');
+            setFeelingScore('');
+        } else {
+            setFeelingScore(event.target.value)
+        }
+    }
+
     return (
         <>
         <h1>How are you feeling today?</h1>
         <form onSubmit={handleSubmit}>
-        <input required type="number" value={feelingScore} placeholder="1-5" onChange = {(event) => setFeelingScore(event.target.value)} />
+        <input required type="number" value={feelingScore} placeholder="1-5" onChange = {(event) => checkNumber(event.target.value)} />
         <button type="submit">NEXT</button>
         </form>
         </>

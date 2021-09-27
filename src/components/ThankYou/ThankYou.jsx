@@ -5,7 +5,7 @@ function ThankYou() {
 
     const restartSurvey = () => {
         event.preventDefault();
-        history.push('/feeling');
+        history.push('/');
     }
 
     return (

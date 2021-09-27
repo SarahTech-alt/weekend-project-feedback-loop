@@ -22,11 +22,20 @@ function SupportRating() {
         history.push('/comment');
     }
 
+    const checkNumber = (number) => {
+        if (number < 1 || number > 5){
+            alert('Number must be between 1 and 5');
+            setSupportScore('');
+        } else {
+            setSupportScore(event.target.value)
+        }
+    }
+
     return (
         <>
         <form onSubmit={handleSubmit}>
             <h1> How well are you being supported?</h1>
-            <input required type="number" value={supportScore} placeholder="1-5" onChange = {(event) => setSupportScore(event.target.value)} />
+            <input required type="number" value={supportScore} placeholder="1-5" onChange = {(event) => checkNumber(event.target.value)} />
             <button type="submit">Next</button>
         </form>
         </>
